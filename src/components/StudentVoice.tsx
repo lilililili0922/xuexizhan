@@ -87,19 +87,19 @@ export function StudentVoice({ initialComments }: StudentVoiceProps) {
     const indent = !isRoot;
     const nested = children.length > 0;
     return (
-      <article className="'voice-thread'" key={comment.id}>
+      <article className="voice-thread" key={comment.id}>
         <div className={isRoot ? 'voice-item' : 'voice-reply'}>
           <div>
             <strong>{comment.anonymousName}</strong>
             <p>{comment.content}</p>
           </div>
-          <div className="'voice-item'-actions">
+          <div className="voice-item-actions">
             <button onClick={() => handleLike(comment.id)} type="button">
               <Heart size={15} />
               {comment.likeCount}
             </button>
             <button
-              className="'voice-reply'-trigger"
+              className="voice-reply-trigger"
               onClick={() => setReplyingTo((current) => (current === comment.id ? "" : comment.id))}
               type="button"
             >
@@ -110,7 +110,7 @@ export function StudentVoice({ initialComments }: StudentVoiceProps) {
         </div>
 
         {nested && (
-          <div className="'voice-replies'">
+          <div className="voice-replies">
             {children.map((child) => renderThread(child, depth + 1))}
           </div>
         )}
@@ -124,7 +124,7 @@ export function StudentVoice({ initialComments }: StudentVoiceProps) {
               onChange={(event) => setReplyContent(event.target.value)}
               placeholder={"回复 " + comment.anonymousName}
             />
-            <button className="'command-button'" disabled={replySubmitting} type="submit">
+            <button className="command-button" disabled={replySubmitting} type="submit">
               {replySubmitting ? "发送中" : "发送回复"}
             </button>
           </form>
@@ -230,7 +230,7 @@ export function StudentVoice({ initialComments }: StudentVoiceProps) {
         <span className="soft-pill">{verified ? "微信已校验" : "需微信登录"}</span>
       </div>
 
-      <form className="'voice-form'" onSubmit={handleSubmit}>
+      <form className="voice-form" onSubmit={handleSubmit}>
         <textarea
           value={content}
           maxLength={240}
@@ -241,12 +241,12 @@ export function StudentVoice({ initialComments }: StudentVoiceProps) {
         <div className="voice-actions">
           <span>{content.length}/240</span>
           {verified ? (
-            <button className="'command-button'" disabled={submitting} type="submit">
+            <button className="command-button" disabled={submitting} type="submit">
               <MessageSquareText size={17} />
               {submitting ? "发布中" : "匿名发布"}
             </button>
           ) : (
-            <button className="'command-button'" onClick={handleLogin} type="button">
+            <button className="command-button" onClick={handleLogin} type="button">
               <ShieldAlert size={17} />
               微信登录
             </button>
@@ -254,11 +254,11 @@ export function StudentVoice({ initialComments }: StudentVoiceProps) {
         </div>
       </form>
 
-      {message ? <p className="'inline-message'">{message}</p> : null}
+      {message ? <p className="inline-message">{message}</p> : null}
 
       <div className="voice-list">
         {commentTree.length === 0 ? (
-          <div className="'empty-state'">今天还没有学生心声。</div>
+          <div className="empty-state">今天还没有学生心声。</div>
         ) : (
           commentTree.slice(0, 4).map((node) => renderThread(node, 0))
         )}
