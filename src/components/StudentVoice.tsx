@@ -74,36 +74,32 @@ export function StudentVoice({ initialComments }: StudentVoiceProps) {
       }
     }
     void loadSession();
-    function RenderCommentNode({ node, depth = 0, replyingTo, replyContent, replySubmitting, setReplyingTo, setReplyContent, setComments, setMessage, handleLike, handleReplySubmit, verified }: {
-    node: CommentTreeNode;
-    depth?: number;
-    replyingTo: string;
-    replyContent: string;
-    replySubmitting: boolean;
-    setReplyingTo: (v: string) => void;
-    setReplyContent: (v: string) => void;
-    setComments: (fn: (prev: StudentComment[]) => StudentComment[]) => void;
-    setMessage: (v: string) => void;
-    handleLike: (id: string) => Promise<void>;
-    handleReplySubmit: (e: React.FormEvent, parentId: string) => Promise<void>;
-    verified: boolean;
-  }) {
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  const verified = Boolean(wechatSession?.authenticated);
+
+  function renderThread(node: CommentTreeNode, depth: number): React.ReactNode {
     const { comment, children } = node;
     const isRoot = depth === 0;
+    const indent = !isRoot;
+    const nested = children.length > 0;
     return (
-      <>
-        <div className={isRoot ? "voice-item" : "voice-reply"}>
+      <article className="'voice-thread'" key={comment.id}>
+        <div className={isRoot ? 'voice-item' : 'voice-reply'}>
           <div>
             <strong>{comment.anonymousName}</strong>
             <p>{comment.content}</p>
           </div>
-          <div className="voice-item-actions">
+          <div className="'voice-item'-actions">
             <button onClick={() => handleLike(comment.id)} type="button">
               <Heart size={15} />
               {comment.likeCount}
             </button>
             <button
-              className="voice-reply-trigger"
+              className="'voice-reply'-trigger"
               onClick={() => setReplyingTo((current) => (current === comment.id ? "" : comment.id))}
               type="button"
             >
@@ -113,25 +109,9 @@ export function StudentVoice({ initialComments }: StudentVoiceProps) {
           </div>
         </div>
 
-        {children.length > 0 && (
-          <div className="voice-replies">
-            {children.map((child) => (
-              <RenderCommentNode
-                key={child.comment.id}
-                node={child}
-                depth={depth + 1}
-                replyingTo={replyingTo}
-                replyContent={replyContent}
-                replySubmitting={replySubmitting}
-                setReplyingTo={setReplyingTo}
-                setReplyContent={setReplyContent}
-                setComments={setComments}
-                setMessage={setMessage}
-                handleLike={handleLike}
-                handleReplySubmit={handleReplySubmit}
-                verified={verified}
-              />
-            ))}
+        {nested && (
+          <div className="'voice-replies'">
+            {children.map((child) => renderThread(child, depth + 1))}
           </div>
         )}
 
@@ -142,23 +122,16 @@ export function StudentVoice({ initialComments }: StudentVoiceProps) {
               maxLength={160}
               minLength={2}
               onChange={(event) => setReplyContent(event.target.value)}
-              placeholder={`回复 ${comment.anonymousName}`}
+              placeholder={"回复 " + comment.anonymousName}
             />
-            <button className="command-button" disabled={replySubmitting} type="submit">
+            <button className="'command-button'" disabled={replySubmitting} type="submit">
               {replySubmitting ? "发送中" : "发送回复"}
             </button>
           </form>
         ) : null}
-      </>
+      </article>
     );
   }
-
-  return () => {
-      active = false;
-    };
-  }, []);
-
-  const verified = Boolean(wechatSession?.authenticated);
 
   async function handleLogin() {
     const redirect = `${window.location.pathname}${window.location.search}${window.location.hash}`;
@@ -257,7 +230,7 @@ export function StudentVoice({ initialComments }: StudentVoiceProps) {
         <span className="soft-pill">{verified ? "微信已校验" : "需微信登录"}</span>
       </div>
 
-      <form className="voice-form" onSubmit={handleSubmit}>
+      <form className="'voice-form'" onSubmit={handleSubmit}>
         <textarea
           value={content}
           maxLength={240}
@@ -268,12 +241,12 @@ export function StudentVoice({ initialComments }: StudentVoiceProps) {
         <div className="voice-actions">
           <span>{content.length}/240</span>
           {verified ? (
-            <button className="command-button" disabled={submitting} type="submit">
+            <button className="'command-button'" disabled={submitting} type="submit">
               <MessageSquareText size={17} />
               {submitting ? "发布中" : "匿名发布"}
             </button>
           ) : (
-            <button className="command-button" onClick={handleLogin} type="button">
+            <button className="'command-button'" onClick={handleLogin} type="button">
               <ShieldAlert size={17} />
               微信登录
             </button>
@@ -281,29 +254,13 @@ export function StudentVoice({ initialComments }: StudentVoiceProps) {
         </div>
       </form>
 
-      {message ? <p className="inline-message">{message}</p> : null}
+      {message ? <p className="'inline-message'">{message}</p> : null}
 
       <div className="voice-list">
         {commentTree.length === 0 ? (
-          <div className="empty-state">今天还没有学生心声。</div>
+          <div className="'empty-state'">今天还没有学生心声。</div>
         ) : (
-          commentTree.slice(0, 4).map((node) => (
-            <article className="voice-thread" key={node.comment.id}>
-              <RenderCommentNode
-                node={node}
-                replyingTo={replyingTo}
-                replyContent={replyContent}
-                replySubmitting={replySubmitting}
-                setReplyingTo={setReplyingTo}
-                setReplyContent={setReplyContent}
-                setComments={setComments}
-                setMessage={setMessage}
-                handleLike={handleLike}
-                handleReplySubmit={handleReplySubmit}
-                verified={verified}
-              />
-            </article>
-          ))
+          commentTree.slice(0, 4).map((node) => renderThread(node, 0))
         )}
       </div>
     </section>
