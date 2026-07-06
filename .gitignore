@@ -34,3 +34,6 @@ data/store.json.bak
 *.bak2
 .playwright-cli/
 outputs/
+.netlify/
+.next/
+work/
