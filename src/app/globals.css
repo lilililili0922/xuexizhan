@@ -1037,10 +1037,11 @@ th {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  padding: 12px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #fff;
+  padding: 12px 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  border-bottom: 1px solid var(--line);
 }
 
 .voice-item strong {
@@ -1063,29 +1064,36 @@ th {
 }
 
 .voice-item-actions button {
-  min-height: 30px;
-  color: var(--ink);
-  background: var(--paper-soft);
-  border: 1px solid var(--line);
+  min-height: 28px;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+
+.voice-item:hover .voice-item-actions button,
+.voice-reply:hover .voice-item-actions button {
+  opacity: 1;
 }
 
 .voice-reply-trigger {
-  color: var(--blue) !important;
+  color: var(--blue);
 }
 
 .voice-replies {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-left: 18px;
-  padding-left: 12px;
+  gap: 4px;
+  margin-left: 16px;
+  padding-left: 14px;
   border-left: 2px solid var(--line);
 }
 
 .voice-reply {
-  padding: 10px 12px;
-  border-radius: 8px;
-  background: #f3f7ff;
+  padding: 8px 0;
+  border-radius: 0;
+  background: transparent;
 }
 
 .voice-reply strong {
@@ -1105,19 +1113,21 @@ th {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 8px;
-  margin-left: 18px;
-  padding-left: 12px;
+  margin-left: 16px;
+  padding-left: 14px;
+  margin-top: 8px;
 }
 
 .reply-form input {
   min-width: 0;
-  min-height: 36px;
-  padding: 0 11px;
+  min-height: 34px;
+  padding: 0 10px;
   border: 1px solid var(--line);
   border-radius: 6px;
   color: var(--ink);
-  background: #fff;
+  background: var(--paper-soft);
   outline: none;
+  font-size: 13px;
 }
 
 .reply-form input:focus {

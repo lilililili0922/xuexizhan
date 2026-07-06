@@ -8,13 +8,23 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest) {
-  const auth = requireWechatSession(request);
-  if (auth.response) return auth.response;
-
-  const body = (await request.json()) as { content?: string; parentId?: string };
+  const body = (await request.json()) as { content?: string; parentId?: string; studentId?: string };
   const content = body.content?.trim() || "";
   if (content.length < 2 || content.length > 240) {
     return NextResponse.json({ error: "心声内容需为 2-240 个字。" }, { status: 400 });
+  }
+
+  // Determine identity: wechat session or local student
+  let openIdHash: string;
+  const auth = requireWechatSession(request);
+  if (auth.response) {
+    if (!body.studentId) {
+      return auth.response;
+    }
+    // Use student-provided identity (mock/local mode)
+    openIdHash = "local_" + body.studentId;
+  } else {
+    openIdHash = auth.openIdHash;
   }
 
   const data = await readStore();
@@ -26,7 +36,7 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  const comment = createComment({ content, openIdHash: auth.openIdHash, parentId });
+  const comment = createComment({ content, openIdHash, parentId });
   data.comments.unshift(comment);
   await writeStore(data);
 

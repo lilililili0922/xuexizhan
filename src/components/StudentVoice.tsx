@@ -79,7 +79,8 @@ export function StudentVoice({ initialComments }: StudentVoiceProps) {
     };
   }, []);
 
-  const verified = Boolean(wechatSession?.authenticated);
+  const localStudentId = typeof window !== "undefined" ? window.localStorage.getItem("demo_signin_student_id") : null;
+  const verified = Boolean(wechatSession?.authenticated) || !!localStudentId;
 
   function renderThread(node: CommentTreeNode, depth: number): React.ReactNode {
     const { comment, children } = node;
@@ -141,17 +142,18 @@ export function StudentVoice({ initialComments }: StudentVoiceProps) {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!verified) {
-      setMessage("请先完成微信登录后再发布。");
+      setMessage("请先签到后再发布心声。");
       return;
     }
     setSubmitting(true);
     setMessage("");
+    const sid = typeof window !== "undefined" ? window.localStorage.getItem("demo_signin_student_id") : null;
     const response = await fetch("/api/comments", {
       method: "POST",
       headers: {
         "content-type": "application/json"
       },
-      body: JSON.stringify({ content })
+      body: JSON.stringify({ content, studentId: !wechatSession?.authenticated ? sid : undefined })
     });
     const result = (await response.json()) as {
       error?: string;
@@ -175,18 +177,19 @@ export function StudentVoice({ initialComments }: StudentVoiceProps) {
   async function handleReplySubmit(event: FormEvent<HTMLFormElement>, parentId: string) {
     event.preventDefault();
     if (!verified) {
-      setMessage("请先完成微信登录后再回复。");
+      setMessage("请先签到后再回复。");
       return;
     }
 
     setReplySubmitting(true);
     setMessage("");
+    const rsid = typeof window !== "undefined" ? window.localStorage.getItem("demo_signin_student_id") : null;
     const response = await fetch("/api/comments", {
       method: "POST",
       headers: {
         "content-type": "application/json"
       },
-      body: JSON.stringify({ content: replyContent, parentId })
+      body: JSON.stringify({ content: replyContent, parentId, studentId: !wechatSession?.authenticated ? rsid : undefined })
     });
     const result = (await response.json()) as {
       error?: string;
@@ -227,7 +230,7 @@ export function StudentVoice({ initialComments }: StudentVoiceProps) {
           <p className="eyebrow-text">STUDENT VOICE</p>
           <h2>学生心声角</h2>
         </div>
-        <span className="soft-pill">{verified ? "微信已校验" : "需微信登录"}</span>
+        <span className="soft-pill">{verified ? "已确认身份" : "需签到后发布"}</span>
       </div>
 
       <form className="voice-form" onSubmit={handleSubmit}>
