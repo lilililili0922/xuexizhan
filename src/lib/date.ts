@@ -41,9 +41,16 @@ export function startOfChinaDay(date: Date) {
   return new Date(`${toDateKey(date)}T00:00:00+08:00`);
 }
 
+// Timezone-safe: get the day of week in China timezone (0=Sun, 1=Mon, etc.)
+function getChinaDayOfWeek(date: Date): number {
+  const dateKey = toDateKey(date);
+  const [y, m, d] = dateKey.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, d)).getUTCDay();
+}
+
 export function getMonday(date: Date) {
   const copy = startOfChinaDay(date);
-  const day = copy.getDay();
+  const day = getChinaDayOfWeek(date);
   const diff = day === 0 ? -6 : 1 - day;
   copy.setDate(copy.getDate() + diff);
   return copy;
