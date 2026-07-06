@@ -52,7 +52,22 @@ async function ensureRuntimeStore() {
   try {
     await fs.access(RUNTIME_STORE_PATH);
   } catch {
-    await fs.copyFile(BASE_STORE_PATH, RUNTIME_STORE_PATH);
+    try {
+      await fs.copyFile(BASE_STORE_PATH, RUNTIME_STORE_PATH);
+    } catch {
+      // On Vercel, data/store.json may not be in the function bundle.
+      // Create a minimal default store to bootstrap.
+      const defaultStore: StoreData = {
+        students: [],
+        courses: [],
+        dailyContents: [],
+        quickLinks: [],
+        comments: [],
+        signInRecords: []
+      };
+      const json = JSON.stringify(defaultStore, null, 2);
+      await fs.writeFile(RUNTIME_STORE_PATH, json, "utf8");
+    }
   }
 }
 
