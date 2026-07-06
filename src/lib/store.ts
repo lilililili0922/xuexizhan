@@ -1,5 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
+import type { StoreData } from "@/types/domain";
 import {
   Course,
   CourseStatus,
@@ -9,10 +10,10 @@ import {
   SignInRecord,
   SignInRow,
   SignInStatus,
-  StoreData,
   StudentComment,
   WeeklyLateRow
 } from "@/types/domain";
+import { ensureInitialStore } from "@/lib/defaultStoreData";
 import {
   buildArrivalTime,
   getMonday,
