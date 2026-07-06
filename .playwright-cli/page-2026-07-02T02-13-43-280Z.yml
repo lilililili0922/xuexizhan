@@ -1,0 +1,231 @@
+- main [ref=e2]:
+  - generic [ref=e4]:
+    - img "像素100&奇点同行 logo" [ref=e6]
+    - text: 像素100&奇点同行
+    - generic [ref=e7]: · 学习站
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - paragraph [ref=e10]: 今天也在向前一点点
+      - heading "把今天这一步走稳，答案会在路上出现。" [level=1] [ref=e11]:
+        - text: 把今天这一步走稳，
+        - mark [ref=e12]: 答案会在路上出现。
+    - generic [ref=e13]:
+      - strong [ref=e14]: 星期四
+      - text: 2026年7月2日 · 第1周
+    - text: ✦
+  - generic [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - heading "今日课程" [level=2] [ref=e20]
+          - generic [ref=e21]: 3 节课程 · 第1周
+        - generic [ref=e22]:
+          - article [ref=e23]:
+            - generic [ref=e24]: 10:30
+            - heading "如何搭建自己的 设计素材库" [level=3] [ref=e25]:
+              - text: 如何搭建自己的
+              - text: 设计素材库
+            - generic [ref=e26]:
+              - text: 张老师 · UX、视觉
+              - text: 腾讯会议：542-223-335
+            - link "加入会议列表 →" [active] [ref=e27] [cursor=pointer]:
+              - /url: https://meeting.tencent.com/dm/a9A1t4AcSboD
+              - text: 加入会议列表
+              - generic [ref=e197]: →
+            - text: "01"
+          - generic [ref=e29]:
+            - generic [ref=e198]:
+              - generic [ref=e199]:
+                - generic [ref=e200]: 14:30
+                - strong [ref=e201]:
+                  - text: 设计师能力模型
+                  - generic [ref=e202]: 新增
+                - generic [ref=e203]:
+                  - generic [ref=e204]: 冯老师
+                  - generic [ref=e205]: UX、视觉
+                - generic [ref=e206]: 会议号 520-394-503
+              - link "加入会议列表" [ref=e208] [cursor=pointer]:
+                - /url: https://meeting.tencent.com/dm/JQfEhJshVmBr
+            - generic [ref=e209]:
+              - generic [ref=e210]:
+                - generic [ref=e211]: 16:30
+                - strong [ref=e212]:
+                  - text: 给新人的AI通识课
+                  - generic [ref=e213]: 新增
+                - generic [ref=e214]:
+                  - generic [ref=e215]: 三牛老师
+                  - generic [ref=e216]: UX、视觉
+                - generic [ref=e217]: 会议号 538-917-643
+              - link "加入会议列表" [ref=e219] [cursor=pointer]:
+                - /url: https://meeting.tencent.com/dm/T7VHpw3flpzo
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - heading "本周课程" [level=2] [ref=e54]
+          - generic [ref=e55]: 第 1 周 · 11 节课程
+        - generic [ref=e56]:
+          - generic [ref=e220]:
+            - generic [ref=e221]: 时间
+            - generic [ref=e222]: 课程
+            - generic [ref=e223]: 主讲老师
+            - generic [ref=e224]: 适合班型
+            - generic [ref=e225]: 会议号
+            - generic [ref=e226]: 操作
+          - generic [ref=e227]:
+            - generic [ref=e228]:
+              - text: 周四
+              - text: 10:30
+            - strong [ref=e230]: 如何搭建自己的设计素材库
+            - generic [ref=e231]: 张老师
+            - generic [ref=e232]: UX、视觉
+            - generic [ref=e233]: 542-223-335
+            - link "加入会议列表" [ref=e235] [cursor=pointer]:
+              - /url: https://meeting.tencent.com/dm/a9A1t4AcSboD
+          - generic [ref=e236]:
+            - generic [ref=e237]:
+              - text: 周四
+              - text: 14:30
+            - strong [ref=e239]:
+              - text: 设计师能力模型
+              - generic [ref=e240]: 新增
+            - generic [ref=e241]: 冯老师
+            - generic [ref=e242]: UX、视觉
+            - generic [ref=e243]: 520-394-503
+            - link "加入会议列表" [ref=e245] [cursor=pointer]:
+              - /url: https://meeting.tencent.com/dm/JQfEhJshVmBr
+          - generic [ref=e246]:
+            - generic [ref=e247]:
+              - text: 周四
+              - text: 16:30
+            - strong [ref=e249]:
+              - text: 给新人的AI通识课
+              - generic [ref=e250]: 新增
+            - generic [ref=e251]: 三牛老师
+            - generic [ref=e252]: UX、视觉
+            - generic [ref=e253]: 538-917-643
+            - link "加入会议列表" [ref=e255] [cursor=pointer]:
+              - /url: https://meeting.tencent.com/dm/T7VHpw3flpzo
+          - generic [ref=e256]:
+            - generic [ref=e257]:
+              - text: 周五
+              - text: 10:00
+            - strong [ref=e259]: 体验设计工作内容及基础知识
+            - generic [ref=e260]: 大老师
+            - generic [ref=e261]: UX、视觉（视觉选听）
+            - generic [ref=e262]: 749-755-003
+            - link "加入会议列表" [ref=e264] [cursor=pointer]:
+              - /url: https://meeting.tencent.com/dm/8sYgJW3WEBk2
+          - generic [ref=e265]:
+            - generic [ref=e266]:
+              - text: 周五
+              - text: 14:30
+            - strong [ref=e268]: 体验设计细节案例分析
+            - generic [ref=e269]: 大老师
+            - generic [ref=e270]: UX、视觉（视觉选听）
+            - generic [ref=e271]: 944-795-339
+            - link "加入会议列表" [ref=e273] [cursor=pointer]:
+              - /url: https://meeting.tencent.com/dm/9joXdsqF5K8N
+          - generic [ref=e274]:
+            - generic [ref=e275]:
+              - text: 周五
+              - text: 16:30
+            - strong [ref=e277]: 场景案例分析
+            - generic [ref=e278]: 大老师
+            - generic [ref=e279]: UX、视觉（视觉选听）
+            - generic [ref=e280]: 449-174-769
+            - link "加入会议列表" [ref=e282] [cursor=pointer]:
+              - /url: https://meeting.tencent.com/dm/sE6RjWAbjkw9
+          - generic [ref=e283]:
+            - generic [ref=e284]:
+              - text: 周六
+              - text: 10:00
+            - strong [ref=e286]: AI 在用户体验设计中的应用
+            - generic [ref=e287]: 年糕老师
+            - generic [ref=e288]: UX、视觉
+            - generic [ref=e289]: 948-328-051
+            - link "加入会议列表" [ref=e291] [cursor=pointer]:
+              - /url: https://meeting.tencent.com/dm/p0KKF3uzl77s
+          - generic [ref=e292]:
+            - generic [ref=e293]:
+              - text: 周六
+              - text: 14:30
+            - strong [ref=e295]: PS软件基础课
+            - generic [ref=e296]: 张老师
+            - generic [ref=e297]: UX、视觉
+            - generic [ref=e298]: 262-941-454
+            - link "加入会议列表" [ref=e300] [cursor=pointer]:
+              - /url: https://meeting.tencent.com/dm/qP42XNPe9vBw
+          - generic [ref=e301]:
+            - generic [ref=e302]:
+              - text: 周三
+              - text: 10:00
+            - strong [ref=e304]: 欢迎来到暑假集训-北京站
+            - generic [ref=e305]: 校区主教老师
+            - generic [ref=e306]: UX、视觉
+            - generic [ref=e307]: 899-192-267
+            - link "已结束" [ref=e309] [cursor=pointer]:
+              - /url: https://meeting.tencent.com/dm/GfidG3aIk2eO
+          - generic [ref=e310]:
+            - generic [ref=e311]:
+              - text: 周三
+              - text: 14:30
+            - strong [ref=e313]: 开学第一课-先导课
+            - generic [ref=e314]: 大老师
+            - generic [ref=e315]: UX、视觉
+            - generic [ref=e316]: 689-284-078
+            - link "已结束" [ref=e318] [cursor=pointer]:
+              - /url: https://meeting.tencent.com/dm/10FD66noRLym
+          - generic [ref=e319]:
+            - generic [ref=e320]:
+              - text: 周三
+              - text: 16:30
+            - strong [ref=e322]: 书籍及资料阅读方法
+            - generic [ref=e323]: 麻雀老师
+            - generic [ref=e324]: UX、视觉
+            - generic [ref=e325]: 407-351-735
+            - link "已结束" [ref=e327] [cursor=pointer]:
+              - /url: https://meeting.tencent.com/dm/GA9ogFwV8rS0
+    - complementary [ref=e165]:
+      - generic [ref=e166]:
+        - heading "快捷入口" [level=2] [ref=e168]
+        - generic [ref=e169]:
+          - link "▤ 提交作业 上传作业与修改稿 →" [ref=e170] [cursor=pointer]:
+            - /url: https://doc.weixin.qq.com/smartsheet/form/1_wpKBGPEQAANFlM_CL0S9dtU8fxLqQLuA_b0c4e8
+            - generic [ref=e171]: ▤
+            - generic [ref=e172]:
+              - strong [ref=e173]: 提交作业
+              - text: 上传作业与修改稿
+            - generic [ref=e174]: →
+          - link "☰ 阅读资源库 课程阅读材料与参考资料 →" [ref=e175] [cursor=pointer]:
+            - /url: https://www.kdocs.cn/l/crXGwV6Faitq?openfrom=docs
+            - generic [ref=e176]: ☰
+            - generic [ref=e177]:
+              - strong [ref=e178]: 阅读资源库
+              - text: 课程阅读材料与参考资料
+            - generic [ref=e179]: →
+          - link "▥ 学习资料库 课件、模板与工具合集 →" [ref=e180] [cursor=pointer]:
+            - /url: https://www.kdocs.cn/l/chYYq77Rzo0j?openfrom=docs
+            - generic [ref=e181]: ▥
+            - generic [ref=e182]:
+              - strong [ref=e183]: 学习资料库
+              - text: 课件、模板与工具合集
+            - generic [ref=e184]: →
+          - link "↥ 课程回放 已直播课程将在48小时内发布到小鹅通 可前往小鹅通观看" [ref=e185] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e186]: ↥
+            - generic [ref=e187]:
+              - strong [ref=e188]: 课程回放
+              - text: 已直播课程将在48小时内发布到小鹅通
+            - text: 可前往小鹅通观看
+          - link "✓ 请假申请 填写请假时间与原因 →" [ref=e189] [cursor=pointer]:
+            - /url: https://doc.weixin.qq.com/smartsheet/form/1_wpKBGPEQAANFlM_CL0S9dtU8fxLqQLuA_bde771
+            - generic [ref=e190]: ✓
+            - generic [ref=e191]:
+              - strong [ref=e192]: 请假申请
+              - text: 填写请假时间与原因
+            - generic [ref=e193]: →
+      - generic [ref=e194]:
+        - generic [ref=e195]: TODAY'S NOTE · 今日提醒
+        - paragraph [ref=e196]:
+          - text: 先认识彼此，
+          - text: 再一起把这段学习旅程走好。
+        - text: ✦

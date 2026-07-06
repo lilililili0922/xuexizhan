@@ -1,0 +1,365 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - link "像素100&奇点同行" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "像素100&奇点同行" [ref=e5]
+      - navigation "主导航" [ref=e6]:
+        - link "今日" [ref=e7] [cursor=pointer]:
+          - /url: "#today"
+        - link "本周" [ref=e8] [cursor=pointer]:
+          - /url: "#weekly"
+        - link "签到" [ref=e9] [cursor=pointer]:
+          - /url: "#morning-sign-in"
+        - link "心声" [ref=e10] [cursor=pointer]:
+          - /url: "#student-voice"
+        - link "老师后台" [ref=e11] [cursor=pointer]:
+          - /url: /admin
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - paragraph [ref=e14]: 今天也在向前一点点
+        - heading "先把今天这一步走稳，答案会在路上出现。" [level=1] [ref=e15]
+      - generic [ref=e16]:
+        - strong [ref=e17]: 星期四
+        - generic [ref=e18]: 2026年7月2日 · 第 1 周
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - generic [ref=e23]:
+              - paragraph [ref=e24]: TODAY
+              - heading "今日课程" [level=2] [ref=e25]
+            - generic [ref=e26]: 3 节课程
+          - article [ref=e27]:
+            - generic [ref=e28]:
+              - generic [ref=e29]: 正在进行
+              - heading "设计师能力模型" [level=3] [ref=e30]
+              - paragraph [ref=e31]:
+                - text: 冯老师 · UX、视觉
+                - text: 腾讯会议：520-394-503
+            - generic [ref=e32]:
+              - strong [ref=e33]: 14:30
+              - link "进入会议" [ref=e34] [cursor=pointer]:
+                - /url: https://meeting.tencent.com/dm/JQfEhJshVmBr
+                - text: 进入会议
+                - img [ref=e35]
+          - generic [ref=e39]:
+            - article [ref=e40]:
+              - generic [ref=e41]: 16:30
+              - strong [ref=e42]:
+                - text: 给新人的AI通识课
+                - emphasis [ref=e43]: 新增
+              - generic [ref=e44]: 三牛老师 · 538-917-643
+              - link "加入会议列表" [ref=e45] [cursor=pointer]:
+                - /url: https://meeting.tencent.com/dm/T7VHpw3flpzo
+                - text: 加入会议列表
+                - img [ref=e46]
+            - article [ref=e50]:
+              - generic [ref=e51]: 10:30
+              - strong [ref=e52]: 如何搭建自己的设计素材库
+              - generic [ref=e53]: 张老师 · 542-223-335
+              - link "已结束" [ref=e54] [cursor=pointer]:
+                - /url: https://meeting.tencent.com/dm/a9A1t4AcSboD
+                - text: 已结束
+                - img [ref=e55]
+        - generic [ref=e59]:
+          - generic [ref=e60]:
+            - generic [ref=e61]:
+              - paragraph [ref=e62]: MORNING CHECK-IN
+              - heading "早上签到表" [level=2] [ref=e63]
+            - generic [ref=e64]: 迟到线 09:30
+          - generic [ref=e65]:
+            - generic [ref=e66]:
+              - img [ref=e67]
+              - strong [ref=e70]: "4"
+              - generic [ref=e71]: 已到
+            - generic [ref=e72]:
+              - img [ref=e73]
+              - strong [ref=e76]: "2"
+              - generic [ref=e77]: 迟到
+            - generic [ref=e78]:
+              - img [ref=e79]
+              - strong [ref=e83]: "2"
+              - generic [ref=e84]: 未到/缺勤
+          - generic [ref=e85]:
+            - strong [ref=e86]: 迟到总结
+            - paragraph [ref=e87]: 周以安、王小舟 迟到。
+          - table [ref=e89]:
+            - rowgroup [ref=e90]:
+              - row "学生 班型 到达时间 状态 备注" [ref=e91]:
+                - columnheader "学生" [ref=e92]
+                - columnheader "班型" [ref=e93]
+                - columnheader "到达时间" [ref=e94]
+                - columnheader "状态" [ref=e95]
+                - columnheader "备注" [ref=e96]
+            - rowgroup [ref=e97]:
+              - row "林小满 UX 暑期集训 A 班 09:04 已到 -" [ref=e98]:
+                - cell "林小满" [ref=e99]
+                - cell "UX 暑期集训 A 班" [ref=e100]
+                - cell "09:04" [ref=e101]
+                - cell "已到" [ref=e102]:
+                  - generic [ref=e103]: 已到
+                - cell "-" [ref=e104]
+              - row "陈一诺 UX 暑期集训 A 班 09:16 已到 -" [ref=e105]:
+                - cell "陈一诺" [ref=e106]
+                - cell "UX 暑期集训 A 班" [ref=e107]
+                - cell "09:16" [ref=e108]
+                - cell "已到" [ref=e109]:
+                  - generic [ref=e110]: 已到
+                - cell "-" [ref=e111]
+              - row "周以安 视觉 暑期集训 B 班 09:36 迟到 地铁延误" [ref=e112]:
+                - cell "周以安" [ref=e113]
+                - cell "视觉 暑期集训 B 班" [ref=e114]
+                - cell "09:36" [ref=e115]
+                - cell "迟到" [ref=e116]:
+                  - generic [ref=e117]: 迟到
+                - cell "地铁延误" [ref=e118]
+              - row "许知夏 视觉 暑期集训 B 班 - 未到 -" [ref=e119]:
+                - cell "许知夏" [ref=e120]
+                - cell "视觉 暑期集训 B 班" [ref=e121]
+                - cell "-" [ref=e122]
+                - cell "未到" [ref=e123]:
+                  - generic [ref=e124]: 未到
+                - cell "-" [ref=e125]
+              - row "王小舟 UX 暑期集训 A 班 09:52 迟到 已联系老师" [ref=e126]:
+                - cell "王小舟" [ref=e127]
+                - cell "UX 暑期集训 A 班" [ref=e128]
+                - cell "09:52" [ref=e129]
+                - cell "迟到" [ref=e130]:
+                  - generic [ref=e131]: 迟到
+                - cell "已联系老师" [ref=e132]
+              - row "赵予白 视觉 暑期集训 B 班 - 未到 -" [ref=e133]:
+                - cell "赵予白" [ref=e134]
+                - cell "视觉 暑期集训 B 班" [ref=e135]
+                - cell "-" [ref=e136]
+                - cell "未到" [ref=e137]:
+                  - generic [ref=e138]: 未到
+                - cell "-" [ref=e139]
+        - generic [ref=e140]:
+          - generic [ref=e141]:
+            - generic [ref=e142]:
+              - paragraph [ref=e143]: WEEKLY PLAN
+              - heading "本周课程" [level=2] [ref=e144]
+            - generic [ref=e145]: 第 1 周 · 11 节
+          - table [ref=e147]:
+            - rowgroup [ref=e148]:
+              - row "时间 课程 主讲 班型 会议号 操作" [ref=e149]:
+                - columnheader "时间" [ref=e150]
+                - columnheader "课程" [ref=e151]
+                - columnheader "主讲" [ref=e152]
+                - columnheader "班型" [ref=e153]
+                - columnheader "会议号" [ref=e154]
+                - columnheader "操作" [ref=e155]
+            - rowgroup [ref=e156]:
+              - row "14:30 设计师能力模型 新增 冯老师 UX、视觉 520-394-503 进入会议" [ref=e157]:
+                - cell "14:30" [ref=e158]
+                - cell "设计师能力模型 新增" [ref=e159]:
+                  - text: 设计师能力模型
+                  - generic [ref=e160]: 新增
+                - cell "冯老师" [ref=e161]
+                - cell "UX、视觉" [ref=e162]
+                - cell "520-394-503" [ref=e163]
+                - cell "进入会议" [ref=e164]:
+                  - link "进入会议" [ref=e165] [cursor=pointer]:
+                    - /url: https://meeting.tencent.com/dm/JQfEhJshVmBr
+                    - text: 进入会议
+                    - img [ref=e166]
+              - row "16:30 给新人的AI通识课 新增 三牛老师 UX、视觉 538-917-643 加入会议列表" [ref=e170]:
+                - cell "16:30" [ref=e171]
+                - cell "给新人的AI通识课 新增" [ref=e172]:
+                  - text: 给新人的AI通识课
+                  - generic [ref=e173]: 新增
+                - cell "三牛老师" [ref=e174]
+                - cell "UX、视觉" [ref=e175]
+                - cell "538-917-643" [ref=e176]
+                - cell "加入会议列表" [ref=e177]:
+                  - link "加入会议列表" [ref=e178] [cursor=pointer]:
+                    - /url: https://meeting.tencent.com/dm/T7VHpw3flpzo
+                    - text: 加入会议列表
+                    - img [ref=e179]
+              - row "10:00 体验设计工作内容及基础知识 大老师 UX、视觉（视觉选听） 749-755-003 加入会议列表" [ref=e183]:
+                - cell "10:00" [ref=e184]
+                - cell "体验设计工作内容及基础知识" [ref=e185]
+                - cell "大老师" [ref=e186]
+                - cell "UX、视觉（视觉选听）" [ref=e187]
+                - cell "749-755-003" [ref=e188]
+                - cell "加入会议列表" [ref=e189]:
+                  - link "加入会议列表" [ref=e190] [cursor=pointer]:
+                    - /url: https://meeting.tencent.com/dm/8sYgJW3WEBk2
+                    - text: 加入会议列表
+                    - img [ref=e191]
+              - row "14:30 体验设计细节案例分析 大老师 UX、视觉（视觉选听） 944-795-339 加入会议列表" [ref=e195]:
+                - cell "14:30" [ref=e196]
+                - cell "体验设计细节案例分析" [ref=e197]
+                - cell "大老师" [ref=e198]
+                - cell "UX、视觉（视觉选听）" [ref=e199]
+                - cell "944-795-339" [ref=e200]
+                - cell "加入会议列表" [ref=e201]:
+                  - link "加入会议列表" [ref=e202] [cursor=pointer]:
+                    - /url: https://meeting.tencent.com/dm/9joXdsqF5K8N
+                    - text: 加入会议列表
+                    - img [ref=e203]
+              - row "16:30 场景案例分析 大老师 UX、视觉（视觉选听） 449-174-769 加入会议列表" [ref=e207]:
+                - cell "16:30" [ref=e208]
+                - cell "场景案例分析" [ref=e209]
+                - cell "大老师" [ref=e210]
+                - cell "UX、视觉（视觉选听）" [ref=e211]
+                - cell "449-174-769" [ref=e212]
+                - cell "加入会议列表" [ref=e213]:
+                  - link "加入会议列表" [ref=e214] [cursor=pointer]:
+                    - /url: https://meeting.tencent.com/dm/sE6RjWAbjkw9
+                    - text: 加入会议列表
+                    - img [ref=e215]
+              - row "10:00 AI 在用户体验设计中的应用 年糕老师 UX、视觉 948-328-051 加入会议列表" [ref=e219]:
+                - cell "10:00" [ref=e220]
+                - cell "AI 在用户体验设计中的应用" [ref=e221]
+                - cell "年糕老师" [ref=e222]
+                - cell "UX、视觉" [ref=e223]
+                - cell "948-328-051" [ref=e224]
+                - cell "加入会议列表" [ref=e225]:
+                  - link "加入会议列表" [ref=e226] [cursor=pointer]:
+                    - /url: https://meeting.tencent.com/dm/p0KKF3uzl77s
+                    - text: 加入会议列表
+                    - img [ref=e227]
+              - row "14:30 PS软件基础课 张老师 UX、视觉 262-941-454 加入会议列表" [ref=e231]:
+                - cell "14:30" [ref=e232]
+                - cell "PS软件基础课" [ref=e233]
+                - cell "张老师" [ref=e234]
+                - cell "UX、视觉" [ref=e235]
+                - cell "262-941-454" [ref=e236]
+                - cell "加入会议列表" [ref=e237]:
+                  - link "加入会议列表" [ref=e238] [cursor=pointer]:
+                    - /url: https://meeting.tencent.com/dm/qP42XNPe9vBw
+                    - text: 加入会议列表
+                    - img [ref=e239]
+              - row "10:00 欢迎来到暑假集训-北京站 校区主教老师 UX、视觉 899-192-267 看回放" [ref=e243]:
+                - cell "10:00" [ref=e244]
+                - cell "欢迎来到暑假集训-北京站" [ref=e245]
+                - cell "校区主教老师" [ref=e246]
+                - cell "UX、视觉" [ref=e247]
+                - cell "899-192-267" [ref=e248]
+                - cell "看回放" [ref=e249]:
+                  - link "看回放" [ref=e250] [cursor=pointer]:
+                    - /url: https://www.xiaoe-tech.com/
+                    - text: 看回放
+                    - img [ref=e251]
+              - row "14:30 开学第一课-先导课 大老师 UX、视觉 689-284-078 看回放" [ref=e255]:
+                - cell "14:30" [ref=e256]
+                - cell "开学第一课-先导课" [ref=e257]
+                - cell "大老师" [ref=e258]
+                - cell "UX、视觉" [ref=e259]
+                - cell "689-284-078" [ref=e260]
+                - cell "看回放" [ref=e261]:
+                  - link "看回放" [ref=e262] [cursor=pointer]:
+                    - /url: https://www.xiaoe-tech.com/
+                    - text: 看回放
+                    - img [ref=e263]
+              - row "16:30 书籍及资料阅读方法 麻雀老师 UX、视觉 407-351-735 看回放" [ref=e267]:
+                - cell "16:30" [ref=e268]
+                - cell "书籍及资料阅读方法" [ref=e269]
+                - cell "麻雀老师" [ref=e270]
+                - cell "UX、视觉" [ref=e271]
+                - cell "407-351-735" [ref=e272]
+                - cell "看回放" [ref=e273]:
+                  - link "看回放" [ref=e274] [cursor=pointer]:
+                    - /url: https://www.xiaoe-tech.com/
+                    - text: 看回放
+                    - img [ref=e275]
+              - row "10:30 如何搭建自己的设计素材库 张老师 UX、视觉 542-223-335 已结束" [ref=e279]:
+                - cell "10:30" [ref=e280]
+                - cell "如何搭建自己的设计素材库" [ref=e281]
+                - cell "张老师" [ref=e282]
+                - cell "UX、视觉" [ref=e283]
+                - cell "542-223-335" [ref=e284]
+                - cell "已结束" [ref=e285]:
+                  - link "已结束" [ref=e286] [cursor=pointer]:
+                    - /url: https://meeting.tencent.com/dm/a9A1t4AcSboD
+                    - text: 已结束
+                    - img [ref=e287]
+      - complementary [ref=e291]:
+        - generic [ref=e292]:
+          - img [ref=e293]
+          - generic [ref=e297]:
+            - paragraph [ref=e298]: READING SHARE
+            - heading "今日阅读分享" [level=2] [ref=e299]
+            - strong [ref=e300]: 王小舟
+        - generic [ref=e301]:
+          - heading "快捷入口" [level=2] [ref=e303]
+          - generic [ref=e304]:
+            - link "提交作业 上传作业与修改稿" [ref=e305] [cursor=pointer]:
+              - /url: https://doc.weixin.qq.com/smartsheet/form/1_wpKBGPEQAANFlM_CL0S9dtU8fxLqQLuA_b0c4e8
+              - img [ref=e307]
+              - generic [ref=e311]:
+                - strong [ref=e312]: 提交作业
+                - generic [ref=e313]: 上传作业与修改稿
+              - img [ref=e314]
+            - link "阅读资源库 课程阅读材料与参考资料" [ref=e318] [cursor=pointer]:
+              - /url: https://www.kdocs.cn/l/crXGwV6Faitq?openfrom=docs
+              - img [ref=e320]
+              - generic [ref=e322]:
+                - strong [ref=e323]: 阅读资源库
+                - generic [ref=e324]: 课程阅读材料与参考资料
+              - img [ref=e325]
+            - link "学习资料库 课件、模板与工具合集" [ref=e329] [cursor=pointer]:
+              - /url: https://www.kdocs.cn/l/chYYq77Rzo0j?openfrom=docs
+              - img [ref=e331]
+              - generic [ref=e333]:
+                - strong [ref=e334]: 学习资料库
+                - generic [ref=e335]: 课件、模板与工具合集
+              - img [ref=e336]
+            - link "课程回放 已直播课程将在48小时内发布到小鹅通" [ref=e340] [cursor=pointer]:
+              - /url: https://www.xiaoe-tech.com/
+              - img [ref=e342]
+              - generic [ref=e345]:
+                - strong [ref=e346]: 课程回放
+                - generic [ref=e347]: 已直播课程将在48小时内发布到小鹅通
+              - img [ref=e348]
+            - link "请假申请 填写请假时间与原因" [ref=e352] [cursor=pointer]:
+              - /url: https://doc.weixin.qq.com/smartsheet/form/1_wpKBGPEQAANFlM_CL0S9dtU8fxLqQLuA_bde771
+              - img [ref=e354]
+              - generic [ref=e358]:
+                - strong [ref=e359]: 请假申请
+                - generic [ref=e360]: 填写请假时间与原因
+              - img [ref=e361]
+        - generic [ref=e365]:
+          - img [ref=e366]
+          - generic [ref=e369]:
+            - paragraph [ref=e370]: 每日注意事项
+            - strong [ref=e371]: 上午先完成签到，课前 10 分钟进入腾讯会议。今天重点整理自己的素材库目录。
+        - generic [ref=e372]:
+          - img [ref=e373]
+          - paragraph [ref=e376]: 今天 22:00 前完成素材库目录整理，明早签到后会抽 3 位同学分享。
+        - generic [ref=e377]:
+          - generic [ref=e378]:
+            - generic [ref=e379]:
+              - paragraph [ref=e380]: STUDENT VOICE
+              - heading "学生心声角" [level=2] [ref=e381]
+            - generic [ref=e382]: 需微信登录
+          - generic [ref=e383]:
+            - textbox "匿名写下今天的疑问、收获或建议。" [ref=e384]
+            - generic [ref=e385]:
+              - generic [ref=e386]: 0/240
+              - button "微信登录" [ref=e387] [cursor=pointer]:
+                - img [ref=e388]
+                - text: 微信登录
+          - generic [ref=e390]:
+            - article [ref=e391]:
+              - generic [ref=e392]:
+                - strong [ref=e393]: 同学 12
+                - paragraph [ref=e394]: 签到表如果能看到迟到原因就更好了，方便我自己复盘通勤时间。
+              - generic [ref=e395]:
+                - button "3" [ref=e396] [cursor=pointer]:
+                  - img [ref=e397]
+                  - text: "3"
+                - button "举报" [ref=e399] [cursor=pointer]
+            - article [ref=e400]:
+              - generic [ref=e401]:
+                - strong [ref=e402]: 同学 07
+                - paragraph [ref=e403]: 今天的素材库课很实用，希望能多看几个真实作品集的整理方法。
+              - generic [ref=e404]:
+                - button "6" [ref=e405] [cursor=pointer]:
+                  - img [ref=e406]
+                  - text: "6"
+                - button "举报" [ref=e408] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=e414] [cursor=pointer]:
+    - img [ref=e415]

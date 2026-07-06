@@ -1,0 +1,93 @@
+import { NextRequest, NextResponse } from "next/server";
+import { getWechatOpenIdHash } from "@/lib/auth";
+import { parseDateParam, toDateKey } from "@/lib/date";
+import { getDailyContent, readStore, resolveStudentForWechat, upsertSignInRecord, writeStore } from "@/lib/store";
+
+function distanceMeters(
+  from: { latitude: number; longitude: number },
+  to: { latitude: number; longitude: number }
+) {
+  const earthRadius = 6371000;
+  const toRadians = (degree: number) => (degree * Math.PI) / 180;
+  const latitudeDelta = toRadians(to.latitude - from.latitude);
+  const longitudeDelta = toRadians(to.longitude - from.longitude);
+  const fromLatitude = toRadians(from.latitude);
+  const toLatitude = toRadians(to.latitude);
+
+  const haversine =
+    Math.sin(latitudeDelta / 2) ** 2 +
+    Math.cos(fromLatitude) * Math.cos(toLatitude) * Math.sin(longitudeDelta / 2) ** 2;
+
+  return earthRadius * 2 * Math.atan2(Math.sqrt(haversine), Math.sqrt(1 - haversine));
+}
+
+export async function POST(request: NextRequest) {
+  const body = (await request.json()) as {
+    date?: string;
+    studentId?: string;
+    latitude?: number;
+    longitude?: number;
+  };
+  if (typeof body.latitude !== "number" || typeof body.longitude !== "number") {
+    return NextResponse.json({ error: "需要授权当前位置后才能签到。" }, { status: 400 });
+  }
+
+  const data = await readStore();
+  if (!body.studentId) {
+    return NextResponse.json({ error: "请先选择自己的姓名。" }, { status: 400 });
+  }
+  const openIdHash = getWechatOpenIdHash(request);
+  let student;
+  if (openIdHash) {
+    const identity = resolveStudentForWechat(data, openIdHash, body.studentId);
+    if ("error" in identity) {
+      return NextResponse.json({ error: identity.error }, { status: identity.status });
+    }
+    student = identity.student;
+  } else {
+    student = data.students.find((item) => item.active && item.id === body.studentId);
+    if (!student) {
+      return NextResponse.json({ error: "未找到对应的学生档案，请重新选择姓名。" }, { status: 404 });
+    }
+  }
+
+  const dateKey = toDateKey(parseDateParam(body.date));
+  const daily = getDailyContent(data, dateKey);
+  const distance = Math.round(
+    distanceMeters(
+      { latitude: body.latitude, longitude: body.longitude },
+      { latitude: daily.signInLatitude, longitude: daily.signInLongitude }
+    )
+  );
+
+  if (distance > daily.signInRadiusMeters) {
+    return NextResponse.json(
+      {
+        error: `当前位置距离「${daily.signInLocationName}」约 ${distance} 米，需在 ${daily.signInRadiusMeters} 米内签到。`,
+        distanceMeters: distance
+      },
+      { status: 422 }
+    );
+  }
+
+  const arrivedAt = new Date();
+  const cutoffAt = new Date(`${dateKey}T${daily.signInCutoff}:00+08:00`);
+  const status = arrivedAt > cutoffAt ? "late" : "on_time";
+
+  upsertSignInRecord(data, {
+    date: dateKey,
+    studentId: student.id,
+    status,
+    arrivedAt: arrivedAt.toISOString(),
+    source: "qr_name_location"
+  });
+  await writeStore(data);
+
+  return NextResponse.json({
+    ok: true,
+    studentName: student.name,
+    status,
+    arrivedAt: arrivedAt.toISOString(),
+    distanceMeters: distance
+  });
+}

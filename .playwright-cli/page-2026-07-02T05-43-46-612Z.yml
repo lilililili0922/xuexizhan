@@ -1,0 +1,231 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - paragraph [ref=e5]: TEACHER ADMIN
+        - heading "学习站老师后台" [level=1] [ref=e6]
+      - link "返回学生端" [ref=e7] [cursor=pointer]:
+        - /url: /
+    - generic [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - generic [ref=e12]:
+              - paragraph [ref=e13]: MORNING CHECK-IN
+              - heading "早上签到表" [level=2] [ref=e14]
+            - generic [ref=e15]:
+              - text: 日期
+              - textbox "日期" [ref=e16]: 2026-07-02
+          - generic [ref=e17]:
+            - strong [ref=e18]: 迟到名单
+            - paragraph [ref=e19]: 周以安、王小舟
+          - table [ref=e21]:
+            - rowgroup [ref=e22]:
+              - row "学生 班型 到达时间 备注 当前状态 操作" [ref=e23]:
+                - columnheader "学生" [ref=e24]
+                - columnheader "班型" [ref=e25]
+                - columnheader "到达时间" [ref=e26]
+                - columnheader "备注" [ref=e27]
+                - columnheader "当前状态" [ref=e28]
+                - columnheader "操作" [ref=e29]
+            - rowgroup [ref=e30]:
+              - row "林小满 UX 暑期集训 A 班 09:04 已到 已到 迟到 缺勤 清除" [ref=e31]:
+                - cell "林小满" [ref=e32]
+                - cell "UX 暑期集训 A 班" [ref=e33]
+                - cell "09:04" [ref=e34]:
+                  - textbox "林小满 到达时间" [ref=e35]: 09:04
+                - cell [ref=e36]:
+                  - textbox "林小满 备注" [ref=e37]:
+                    - /placeholder: 原因/说明
+                - cell "已到" [ref=e38]:
+                  - generic [ref=e39]: 已到
+                - cell "已到 迟到 缺勤 清除" [ref=e40]:
+                  - generic [ref=e41]:
+                    - button "已到" [ref=e42] [cursor=pointer]
+                    - button "迟到" [ref=e43] [cursor=pointer]
+                    - button "缺勤" [ref=e44] [cursor=pointer]
+                    - button "清除" [ref=e45] [cursor=pointer]
+              - row "陈一诺 UX 暑期集训 A 班 09:16 已到 已到 迟到 缺勤 清除" [ref=e46]:
+                - cell "陈一诺" [ref=e47]
+                - cell "UX 暑期集训 A 班" [ref=e48]
+                - cell "09:16" [ref=e49]:
+                  - textbox "陈一诺 到达时间" [ref=e50]: 09:16
+                - cell [ref=e51]:
+                  - textbox "陈一诺 备注" [ref=e52]:
+                    - /placeholder: 原因/说明
+                - cell "已到" [ref=e53]:
+                  - generic [ref=e54]: 已到
+                - cell "已到 迟到 缺勤 清除" [ref=e55]:
+                  - generic [ref=e56]:
+                    - button "已到" [ref=e57] [cursor=pointer]
+                    - button "迟到" [ref=e58] [cursor=pointer]
+                    - button "缺勤" [ref=e59] [cursor=pointer]
+                    - button "清除" [ref=e60] [cursor=pointer]
+              - row "周以安 视觉 暑期集训 B 班 09:36 地铁延误 迟到 已到 迟到 缺勤 清除" [ref=e61]:
+                - cell "周以安" [ref=e62]
+                - cell "视觉 暑期集训 B 班" [ref=e63]
+                - cell "09:36" [ref=e64]:
+                  - textbox "周以安 到达时间" [ref=e65]: 09:36
+                - cell "地铁延误" [ref=e66]:
+                  - textbox "周以安 备注" [ref=e67]:
+                    - /placeholder: 原因/说明
+                    - text: 地铁延误
+                - cell "迟到" [ref=e68]:
+                  - generic [ref=e69]: 迟到
+                - cell "已到 迟到 缺勤 清除" [ref=e70]:
+                  - generic [ref=e71]:
+                    - button "已到" [ref=e72] [cursor=pointer]
+                    - button "迟到" [ref=e73] [cursor=pointer]
+                    - button "缺勤" [ref=e74] [cursor=pointer]
+                    - button "清除" [ref=e75] [cursor=pointer]
+              - row "许知夏 视觉 暑期集训 B 班 未到 已到 迟到 缺勤 清除" [ref=e76]:
+                - cell "许知夏" [ref=e77]
+                - cell "视觉 暑期集训 B 班" [ref=e78]
+                - cell [ref=e79]:
+                  - textbox "许知夏 到达时间" [ref=e80]
+                - cell [ref=e81]:
+                  - textbox "许知夏 备注" [ref=e82]:
+                    - /placeholder: 原因/说明
+                - cell "未到" [ref=e83]:
+                  - generic [ref=e84]: 未到
+                - cell "已到 迟到 缺勤 清除" [ref=e85]:
+                  - generic [ref=e86]:
+                    - button "已到" [ref=e87] [cursor=pointer]
+                    - button "迟到" [ref=e88] [cursor=pointer]
+                    - button "缺勤" [ref=e89] [cursor=pointer]
+                    - button "清除" [ref=e90] [cursor=pointer]
+              - row "王小舟 UX 暑期集训 A 班 09:52 已联系老师 迟到 已到 迟到 缺勤 清除" [ref=e91]:
+                - cell "王小舟" [ref=e92]
+                - cell "UX 暑期集训 A 班" [ref=e93]
+                - cell "09:52" [ref=e94]:
+                  - textbox "王小舟 到达时间" [ref=e95]: 09:52
+                - cell "已联系老师" [ref=e96]:
+                  - textbox "王小舟 备注" [ref=e97]:
+                    - /placeholder: 原因/说明
+                    - text: 已联系老师
+                - cell "迟到" [ref=e98]:
+                  - generic [ref=e99]: 迟到
+                - cell "已到 迟到 缺勤 清除" [ref=e100]:
+                  - generic [ref=e101]:
+                    - button "已到" [ref=e102] [cursor=pointer]
+                    - button "迟到" [ref=e103] [cursor=pointer]
+                    - button "缺勤" [ref=e104] [cursor=pointer]
+                    - button "清除" [ref=e105] [cursor=pointer]
+              - row "赵予白 视觉 暑期集训 B 班 未到 已到 迟到 缺勤 清除" [ref=e106]:
+                - cell "赵予白" [ref=e107]
+                - cell "视觉 暑期集训 B 班" [ref=e108]
+                - cell [ref=e109]:
+                  - textbox "赵予白 到达时间" [ref=e110]
+                - cell [ref=e111]:
+                  - textbox "赵予白 备注" [ref=e112]:
+                    - /placeholder: 原因/说明
+                - cell "未到" [ref=e113]:
+                  - generic [ref=e114]: 未到
+                - cell "已到 迟到 缺勤 清除" [ref=e115]:
+                  - generic [ref=e116]:
+                    - button "已到" [ref=e117] [cursor=pointer]
+                    - button "迟到" [ref=e118] [cursor=pointer]
+                    - button "缺勤" [ref=e119] [cursor=pointer]
+                    - button "清除" [ref=e120] [cursor=pointer]
+        - generic [ref=e121]:
+          - generic [ref=e122]:
+            - generic [ref=e123]:
+              - paragraph [ref=e124]: COMMENT REVIEW
+              - heading "学生心声审核" [level=2] [ref=e125]
+            - img [ref=e126]
+          - table [ref=e130]:
+            - rowgroup [ref=e131]:
+              - row "匿名名 内容 状态 微信 hash 操作" [ref=e132]:
+                - columnheader "匿名名" [ref=e133]
+                - columnheader "内容" [ref=e134]
+                - columnheader "状态" [ref=e135]
+                - columnheader "微信 hash" [ref=e136]
+                - columnheader "操作" [ref=e137]
+            - rowgroup [ref=e138]:
+              - row "同学 07 今天的素材库课很实用，希望能多看几个真实作品集的整理方法。 approved hash_demo_07 通过 隐藏 删除" [ref=e139]:
+                - cell "同学 07" [ref=e140]
+                - cell "今天的素材库课很实用，希望能多看几个真实作品集的整理方法。" [ref=e141]
+                - cell "approved" [ref=e142]
+                - cell "hash_demo_07" [ref=e143]
+                - cell "通过 隐藏 删除" [ref=e144]:
+                  - generic [ref=e145]:
+                    - button "通过" [ref=e146] [cursor=pointer]
+                    - button "隐藏" [ref=e147] [cursor=pointer]
+                    - button "删除" [ref=e148] [cursor=pointer]
+              - row "同学 12 签到表如果能看到迟到原因就更好了，方便我自己复盘通勤时间。 approved hash_demo_12 通过 隐藏 删除" [ref=e149]:
+                - cell "同学 12" [ref=e150]
+                - cell "签到表如果能看到迟到原因就更好了，方便我自己复盘通勤时间。" [ref=e151]
+                - cell "approved" [ref=e152]
+                - cell "hash_demo_12" [ref=e153]
+                - cell "通过 隐藏 删除" [ref=e154]:
+                  - generic [ref=e155]:
+                    - button "通过" [ref=e156] [cursor=pointer]
+                    - button "隐藏" [ref=e157] [cursor=pointer]
+                    - button "删除" [ref=e158] [cursor=pointer]
+      - complementary [ref=e159]:
+        - generic [ref=e160]:
+          - generic [ref=e161]:
+            - generic [ref=e162]:
+              - paragraph [ref=e163]: DAILY CONTENT
+              - heading "今日内容维护" [level=2] [ref=e164]
+            - img [ref=e165]
+          - generic [ref=e169]:
+            - generic [ref=e170]:
+              - text: 阅读分享人
+              - textbox "阅读分享人" [ref=e171]: 王小舟
+            - generic [ref=e172]:
+              - text: 签到迟到线
+              - textbox "签到迟到线" [ref=e173]: 09:30
+            - generic [ref=e174]:
+              - text: 首页标语
+              - textbox "首页标语" [ref=e175]: 先把今天这一步走稳，答案会在路上出现。
+            - generic [ref=e176]:
+              - text: 每日注意事项
+              - textbox "每日注意事项" [ref=e177]: 上午先完成签到，课前 10 分钟进入腾讯会议。今天重点整理自己的素材库目录。
+            - button "保存今日内容" [ref=e178] [cursor=pointer]:
+              - img [ref=e179]
+              - text: 保存今日内容
+        - generic [ref=e183]:
+          - generic [ref=e184]:
+            - generic [ref=e185]:
+              - paragraph [ref=e186]: COURSE EDITOR
+              - heading "新增课程" [level=2] [ref=e187]
+            - img [ref=e188]
+          - generic [ref=e190]:
+            - generic [ref=e191]:
+              - text: 课程标题
+              - textbox "课程标题" [ref=e192]
+            - generic [ref=e193]:
+              - text: 开始时间
+              - textbox "开始时间" [ref=e194]
+            - generic [ref=e195]:
+              - text: 结束时间
+              - textbox "结束时间" [ref=e196]
+            - generic [ref=e197]:
+              - text: 老师
+              - textbox "老师" [ref=e198]
+            - generic [ref=e199]:
+              - text: 班型
+              - textbox "班型" [ref=e200]: UX、视觉
+            - generic [ref=e201]:
+              - text: 会议号
+              - textbox "会议号" [ref=e202]
+            - generic [ref=e203]:
+              - text: 新增标记
+              - combobox "新增标记" [ref=e204]:
+                - option "普通课程" [selected]
+                - option "新增课程"
+            - generic [ref=e205]:
+              - text: 腾讯会议链接
+              - textbox "腾讯会议链接" [ref=e206]
+            - generic [ref=e207]:
+              - text: 回放链接
+              - textbox "回放链接" [ref=e208]
+            - button "保存课程" [ref=e209] [cursor=pointer]:
+              - img [ref=e210]
+              - text: 保存课程
+        - generic [ref=e212]:
+          - img [ref=e213]
+          - strong [ref=e216]: 后台操作会写入本地 JSON 数据；接数据库后复用同一组 API。
+  - button "Open Next.js Dev Tools" [ref=e222] [cursor=pointer]:
+    - img [ref=e223]
